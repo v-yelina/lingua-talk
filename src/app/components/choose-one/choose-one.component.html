@@ -1,1 +1,6 @@
-<p>choose-one works!</p>
+<section class="choose-one-card">
+  <div class="question">Your Question</div>
+  <ul class="answers">
+    <li *ngFor="let currentAnswer of answersList">{{currentAnswer[0]}}</li>
+  </ul>
+</section>
