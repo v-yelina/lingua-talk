@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Answer } from 'src/app/models/answer.interface';
 
 @Component({
   selector: 'app-choose-one',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./choose-one.component.scss']
 })
 export class ChooseOneComponent implements OnInit {
-  answersList: [string, boolean][] = [['first', true], ['second', false], ['third', false], ['fourth', false]];
+  answersList: Answer[] = [{ value: 'first', isCorrect: true }, { value: 'second', isCorrect: false }, {
+    value: 'third', isCorrect: false
+  }, {
+    value: 'fourth', isCorrect: false
+  }];
 
   constructor() { }
 
