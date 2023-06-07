@@ -1,7 +1,9 @@
 <div class="game-card">
-  <div class="question">Your Question</div>
+  <div class="question">{{questionsList[currentQuestionIndex].value}}</div>
   <ul class="answers-list">
-    <li *ngFor="let currentAnswer of answersList" class="answer">{{currentAnswer.value}}</li>
+    <li *ngFor="let currentAnswer of questionsList[currentQuestionIndex].answersList"
+      class="answer">
+      {{currentAnswer.value}}</li>
   </ul>
   <button class="btn btn-next">Next</button>
 </div>
