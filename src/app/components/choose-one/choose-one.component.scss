@@ -1,7 +1,6 @@
-.choose-one-card {
+.game-card {
   width: 30%;
-  margin: auto;
-  border: 2px solid black;
+  margin: 20px auto;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -10,12 +9,41 @@
   align-items: center;
 }
 
+.question {
+  font-size: 2rem;
+  background-color: #e8ddb5;
+  width: 80%;
+  padding: 30px 10px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .answers-list {
   align-self: stretch;
   list-style: none;
+  padding-left: 0;
 }
 
 .answer {
-  border: 1px solid green;
+  margin: 10px 0;
+  padding: 10px 5px;
+  border: 1px solid #5bba6f;
   border-radius: 5px;
+}
+
+.btn {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #054a29;
+  border-radius: 5px;
+  color: white;
+
+  &:hover {
+    background-color: #137547;
+    box-shadow: 0 0 0 2px #054a29;
+    transition: 0.7s;
+    border: none;
+  }
 }
