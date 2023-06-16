@@ -6,7 +6,7 @@
         'correct': selectedAnswerIndex === i && isAnswerCorrect,
         'incorrect': selectedAnswerIndex === i && !isAnswerCorrect
       }" (click)="checkIsAnswerCorrect(currentQuestionIndex, i)">
-      {{currentAnswer.value}}</li>
+      {{i + 1}}. {{currentAnswer.value}}</li>
   </ul>
   <button class="btn btn-next">Next</button>
 </div>
