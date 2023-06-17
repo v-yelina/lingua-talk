@@ -30,6 +30,7 @@
   padding: 10px 5px;
   border: 1px solid #5bba6f;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-next {
@@ -39,6 +40,7 @@
   background-color: #054a29;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 
   &:hover {
     background-color: #137547;
@@ -46,13 +48,6 @@
     transition: 0.7s;
     border: none;
   }
-
-  // &:disabled,
-  // &[disabled] {
-  //   border: 1px solid #999999;
-  //   background-color: #cccccc;
-  //   color: #666666;
-  // }
 }
 
 .correct {
@@ -69,5 +64,4 @@
 .disabled {
   pointer-events: none;
   opacity: 0.5;
-  /* Add any other disabled styles as needed */
 }
