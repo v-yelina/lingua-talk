@@ -46,6 +46,14 @@ export class ChooseOneComponent implements OnInit {
     this.selectedAnswerIndex = answerId;
   }
 
+  showNextQuestion() {
+    if (this.currentQuestionIndex < this.questionsList.length) {
+      this.currentQuestionIndex += 1;
+      this.selectedAnswerIndex = null;
+      this.isAnswerCorrect = null
+    }
+  }
+
   @HostListener('window:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     const keyPressed = event.key;
