@@ -1,5 +1,7 @@
 <div class="game-card">
-  <div class="question">{{questionsList[currentQuestionIndex].value}}</div>
+  <div class="question">{{questionsList[currentQuestionIndex].value}} <span
+      class="question-counter">{{currentQuestionIndex +
+      1}} / {{questionsList.length}}</span></div>
   <ul class="answers-list">
     <li *ngFor="let currentAnswer of questionsList[currentQuestionIndex].answersList; index as i"
       class="answer" [ngClass]="{
