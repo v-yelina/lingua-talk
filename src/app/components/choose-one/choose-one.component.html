@@ -1,1 +1,16 @@
-<p>choose-one works!</p>
+<div class="game-card">
+  <div class="question">{{questionsList[currentQuestionIndex].value}} <span
+      class="question-counter">{{currentQuestionIndex +
+      1}} / {{questionsList.length}}</span></div>
+  <ul class="answers-list">
+    <li *ngFor="let currentAnswer of questionsList[currentQuestionIndex].answersList; index as i"
+      class="answer" [ngClass]="{
+        'correct': selectedAnswerIndex === i && isAnswerCorrect,
+        'incorrect': selectedAnswerIndex === i && !isAnswerCorrect,
+        'disabled': selectedAnswerIndex !== null
+      }" (click)="checkIsAnswerCorrect(currentQuestionIndex, i)">
+      {{i + 1}}. {{currentAnswer.value}}</li>
+  </ul>
+  <button class="btn btn-next" [ngClass]="{'disabled': !(selectedAnswerIndex !== null)
+      }" [disabled]="!(selectedAnswerIndex !== null)" (click)="showNextQuestion()">Next</button>
+</div>

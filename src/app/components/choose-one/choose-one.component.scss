@@ -1,0 +1,79 @@
+.game-card {
+  width: 30%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  position: relative;
+  font-size: 2rem;
+  background-color: #e8ddb5;
+  width: 80%;
+  padding: 30px 10px 50px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+
+  &-counter {
+    position: absolute;
+    bottom: -15px;
+    left: 40%;
+    background-color: white;
+    border: 3px solid #e8ddb5;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+.answers-list {
+  align-self: stretch;
+  list-style: none;
+  padding-left: 0;
+}
+
+.answer {
+  margin: 10px 0;
+  padding: 10px 5px;
+  border: 1px solid #5bba6f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-next {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #054a29;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #137547;
+    box-shadow: 0 0 0 2px #054a29;
+    transition: 0.7s;
+    border: none;
+  }
+}
+
+.correct {
+  background-color: #5bba6f;
+  color: white;
+}
+
+.incorrect {
+  background-color: #d62828;
+  color: white;
+  border: 1px solid #d62828;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
