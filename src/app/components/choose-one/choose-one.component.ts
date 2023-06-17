@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Question } from 'src/app/models/question.interface';
 
 @Component({
@@ -44,6 +44,19 @@ export class ChooseOneComponent implements OnInit {
   checkIsAnswerCorrect(questionId: number, answerId: number) {
     this.isAnswerCorrect = this.questionsList[questionId].answersList[answerId].isCorrect;
     this.selectedAnswerIndex = answerId;
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    const keyPressed = event.key;
+
+    if (/[1-4]/.test(keyPressed)) {
+      const answerIndex = Number(keyPressed) - 1;
+
+      if (answerIndex >= 0 && answerIndex < this.questionsList[this.currentQuestionIndex].answersList.length) {
+        this.checkIsAnswerCorrect(this.currentQuestionIndex, answerIndex);
+      }
+    }
   }
 
 }
