@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChooseOneComponent } from './components/choose-one/choose-one.component';
-import { GamesComponent } from './components/games/games.component';
 import { MainPageComponent } from './main-page/components/main-page/main-page.component';
 
 const routes: Routes = [{ path: 'main', component: MainPageComponent },
 {
-  path: 'games', component: GamesComponent,
+  path: 'games', loadChildren: () => import('./games/games.module').then((m) => m.GamesModule),
 },
 {
-  path: 'choose-one', component: ChooseOneComponent,
+  path: 'choose-one', loadChildren: () => import('./games/games.module').then((m) => m.GamesModule),
 },
 { path: '', redirectTo: '/main', pathMatch: 'full' },
   // TODO { path: '**', component: NotFoundPageComponent },
