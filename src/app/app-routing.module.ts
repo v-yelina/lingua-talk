@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChooseOneComponent } from './components/choose-one/choose-one.component';
 import { GamesComponent } from './components/games/games.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
+import { MainPageComponent } from './main-page/components/main-page/main-page.component';
 
 const routes: Routes = [{ path: 'main', component: MainPageComponent },
 {
