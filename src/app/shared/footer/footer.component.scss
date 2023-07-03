@@ -10,8 +10,17 @@
   align-items: center;
 }
 
-.github__link {
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
+.github {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__icon {
+    height: 2rem;
+  }
+  &__link {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
 }
