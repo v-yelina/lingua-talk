@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import fahrzeuge from 'src/app/db/fahrzeuge';
 import { Question } from 'src/app/models/question.interface';
 
 @Component({
@@ -7,13 +8,7 @@ import { Question } from 'src/app/models/question.interface';
   styleUrls: ['./choose-one.component.scss']
 })
 export class ChooseOneComponent implements OnInit {
-  questionsList: Question[] = [{
-    value: '../../../../assets/audio/fahrzeuge/pronunciation_de_anhänger.mp3', answersList: [{ value: '../../../../assets/img/fahrzeuge/anhänger.png', isCorrect: true }, { value: '../../../../assets/img/fahrzeuge/boot.jpg', isCorrect: false }, {
-      value: '../../../../assets/img/fahrzeuge/fahrrad.png', isCorrect: false
-    }, {
-      value: '../../../../assets/img/fahrzeuge/flugzeug.jpg', isCorrect: false
-    }]
-  }]
+  questionsList: Question[] = fahrzeuge;
   // questionsList: Question[] = [{
   //   value: 'First question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: true }, { value: 'second', isCorrect: false }, {
   //     value: 'third', isCorrect: false
@@ -49,6 +44,7 @@ export class ChooseOneComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.playAudio(this.questionsList[this.currentQuestionIndex].url)
   }
 
   checkIsAnswerCorrect(questionId: number, answerId: number) {
@@ -61,13 +57,12 @@ export class ChooseOneComponent implements OnInit {
     if (this.currentQuestionIndex < this.questionsList.length) {
       this.currentQuestionIndex += 1;
       this.selectedAnswerIndex = null;
-      this.isAnswerCorrect = null
+      this.isAnswerCorrect = null;
+      this.playAudio(this.questionsList[this.currentQuestionIndex].url);
     }
   }
 
   playAudio(src: string) {
-    console.log(src);
-
     let audio = new Audio();
     audio.src = src;
     audio.load();
