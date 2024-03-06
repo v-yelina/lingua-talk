@@ -1,0 +1,14 @@
+.games {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
+
+  .game-btn {
+    max-height: 250px;
+    max-width: 45%;
+    img {
+      max-height: 100%;
+    }
+  }
+}
