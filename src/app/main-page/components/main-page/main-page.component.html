@@ -1,2 +1,10 @@
-<p>main-page works!</p>
-<button routerLink="/games">Games</button>
+<div class="welcome">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" name="name" required>
+      <button class="btn" type="submit">Submit</button>
+    </div>
+  </form>
+  <button class="to-games-btn" routerLink="/games" [ngClass]="{'disabled': !(isAllowed === false)
+      }"><img src="../../../../assets/img/welcome.png"></button>
+</div>
