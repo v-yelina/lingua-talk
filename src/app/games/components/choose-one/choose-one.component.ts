@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import fahrzeuge from 'src/app/db/fahrzeuge';
 import { Question } from 'src/app/models/question.interface';
+import { DbService } from 'src/app/service/db.service';
 
 @Component({
   selector: 'app-choose-one',
@@ -8,32 +9,7 @@ import { Question } from 'src/app/models/question.interface';
   styleUrls: ['./choose-one.component.scss']
 })
 export class ChooseOneComponent implements OnInit {
-  questionsList: Question[] = fahrzeuge;
-  // questionsList: Question[] = [{
-  //   value: 'First question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: true }, { value: 'second', isCorrect: false }, {
-  //     value: 'third', isCorrect: false
-  //   }, {
-  //     value: 'fourth', isCorrect: false
-  //   }]
-  // }, {
-  //   value: 'Second question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: true }, {
-  //     value: 'third', isCorrect: false
-  //   }, {
-  //     value: 'fourth', isCorrect: false
-  //   }]
-  // }, {
-  //   value: 'Third question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: false }, {
-  //     value: 'third', isCorrect: true
-  //   }, {
-  //     value: 'fourth', isCorrect: false
-  //   }]
-  // }, {
-  //   value: 'Fourth question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: false }, {
-  //     value: 'third', isCorrect: false
-  //   }, {
-  //     value: 'fourth', isCorrect: true
-  //   }]
-  // }];
+  questionsList: Question[] = this.dbService.selectDb();
   currentQuestionIndex = 0;
   selectedAnswerIndex: number | null = null;
   isAnswerCorrect: boolean | null = null;
@@ -41,7 +17,7 @@ export class ChooseOneComponent implements OnInit {
   correctAnswerSoundFileName = 'right-answer.mp3'
   wrongAnswerSoundFileName = 'wrong-answer.mp3'
 
-  constructor() { }
+  constructor(private dbService: DbService) { }
 
   ngOnInit(): void {
     this.playAudio(this.questionsList[this.currentQuestionIndex].url)
