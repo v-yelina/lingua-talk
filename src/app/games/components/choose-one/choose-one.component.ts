@@ -8,33 +8,43 @@ import { Question } from 'src/app/models/question.interface';
 })
 export class ChooseOneComponent implements OnInit {
   questionsList: Question[] = [{
-    value: 'First question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: true }, { value: 'second', isCorrect: false }, {
-      value: 'third', isCorrect: false
+    value: '../../../../assets/audio/fahrzeuge/pronunciation_de_anhänger.mp3', answersList: [{ value: '../../../../assets/img/fahrzeuge/anhänger.png', isCorrect: true }, { value: '../../../../assets/img/fahrzeuge/boot.jpg', isCorrect: false }, {
+      value: '../../../../assets/img/fahrzeuge/fahrrad.png', isCorrect: false
     }, {
-      value: 'fourth', isCorrect: false
+      value: '../../../../assets/img/fahrzeuge/flugzeug.jpg', isCorrect: false
     }]
-  }, {
-    value: 'Second question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: true }, {
-      value: 'third', isCorrect: false
-    }, {
-      value: 'fourth', isCorrect: false
-    }]
-  }, {
-    value: 'Third question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: false }, {
-      value: 'third', isCorrect: true
-    }, {
-      value: 'fourth', isCorrect: false
-    }]
-  }, {
-    value: 'Fourth question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: false }, {
-      value: 'third', isCorrect: false
-    }, {
-      value: 'fourth', isCorrect: true
-    }]
-  }];
+  }]
+  // questionsList: Question[] = [{
+  //   value: 'First question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: true }, { value: 'second', isCorrect: false }, {
+  //     value: 'third', isCorrect: false
+  //   }, {
+  //     value: 'fourth', isCorrect: false
+  //   }]
+  // }, {
+  //   value: 'Second question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: true }, {
+  //     value: 'third', isCorrect: false
+  //   }, {
+  //     value: 'fourth', isCorrect: false
+  //   }]
+  // }, {
+  //   value: 'Third question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: false }, {
+  //     value: 'third', isCorrect: true
+  //   }, {
+  //     value: 'fourth', isCorrect: false
+  //   }]
+  // }, {
+  //   value: 'Fourth question is really really long, the longest question ever', answersList: [{ value: 'first', isCorrect: false }, { value: 'second', isCorrect: false }, {
+  //     value: 'third', isCorrect: false
+  //   }, {
+  //     value: 'fourth', isCorrect: true
+  //   }]
+  // }];
   currentQuestionIndex = 0;
   selectedAnswerIndex: number | null = null;
   isAnswerCorrect: boolean | null = null;
+  answersSoundFolder = '../../../../assets/audio/answers/'
+  correctAnswerSoundFileName = 'right-answer.mp3'
+  wrongAnswerSoundFileName = 'wrong-answer.mp3'
 
   constructor() { }
 
@@ -43,6 +53,7 @@ export class ChooseOneComponent implements OnInit {
 
   checkIsAnswerCorrect(questionId: number, answerId: number) {
     this.isAnswerCorrect = this.questionsList[questionId].answersList[answerId].isCorrect;
+    this.isAnswerCorrect ? this.playAudio(this.answersSoundFolder + this.correctAnswerSoundFileName) : this.playAudio(this.answersSoundFolder + this.wrongAnswerSoundFileName)
     this.selectedAnswerIndex = answerId;
   }
 
@@ -52,6 +63,15 @@ export class ChooseOneComponent implements OnInit {
       this.selectedAnswerIndex = null;
       this.isAnswerCorrect = null
     }
+  }
+
+  playAudio(src: string) {
+    console.log(src);
+
+    let audio = new Audio();
+    audio.src = src;
+    audio.load();
+    audio.play();
   }
 
   @HostListener('window:keydown', ['$event'])
