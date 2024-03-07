@@ -17,5 +17,8 @@ export class GamesComponent implements OnInit {
   setFahrzeuge() {
     this.dbService.setGameType(Games.fahrzeuge);
   }
+  setSpielplatz() {
+    this.dbService.setGameType(Games.spielplatz);
+  }
 
 }

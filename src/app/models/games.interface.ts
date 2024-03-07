@@ -1,3 +1,4 @@
 export enum Games {
-  fahrzeuge = 'fahrzeuge'
+  fahrzeuge = 'fahrzeuge',
+  spielplatz = 'spielplatz'
 }
