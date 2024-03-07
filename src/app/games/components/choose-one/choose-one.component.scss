@@ -18,6 +18,11 @@
   margin: auto;
   text-align: center;
   border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 
   &-counter {
     position: absolute;
@@ -93,4 +98,9 @@
 .disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.play_btn {
+  width: 50px;
+  height: 50px;
 }

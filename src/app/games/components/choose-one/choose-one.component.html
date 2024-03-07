@@ -1,5 +1,7 @@
 <div class="game-card">
-  <div class="question">{{questionsList[currentQuestionIndex].value.toUpperCase()}}<span
+  <div class="question">{{questionsList[currentQuestionIndex].value.toUpperCase()}}<img
+      src="../../../../assets/img/play.png" class="play_btn"
+      (click)="playAudio(questionsList[currentQuestionIndex].url)"><span
       class="question-counter">{{currentQuestionIndex +
       1}} / {{questionsList.length}}</span></div>
   <ul class="answers-list">
