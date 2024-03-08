@@ -1,6 +1,13 @@
 import { Question } from "../models/question.interface";
 
 const spielplatz: Question[] = [{
+  value: 'ich_muss_aufs_klo',
+  url: '../../../../assets/audio/spielplatz/pronunciation_de_ich_muss_aufs_klo.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/ich_muss_aufs_klo.png', isCorrect: true }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
+    value: '../../../../assets/img/spielplatz/schaukel.png', isCorrect: false
+  }, {
+    value: '../../../../assets/img/spielplatz/spielen.png', isCorrect: false
+  }]
+}, {
   value: 'rutsche',
   url: '../../../../assets/audio/spielplatz/pronunciation_de_rutsche.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/rutsche.png', isCorrect: true }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
     value: '../../../../assets/img/spielplatz/schaukel.png', isCorrect: false
@@ -34,6 +41,13 @@ const spielplatz: Question[] = [{
     value: '../../../../assets/img/spielplatz/die_kinder_spielen_im_sandkasten.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/mit_puppen_spielen.png', isCorrect: false
+  }]
+}, {
+  value: 'schubsen',
+  url: '../../../../assets/audio/spielplatz/pronunciation_de_schubsen.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/ich_muss_aufs_klo.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
+    value: '../../../../assets/img/spielplatz/schubsen.png', isCorrect: true
+  }, {
+    value: '../../../../assets/img/spielplatz/spielen.png', isCorrect: false
   }]
 }, {
   value: 'mit puppen spielen',
