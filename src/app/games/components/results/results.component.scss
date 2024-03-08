@@ -1,0 +1,29 @@
+.results {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.congrats-img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.games-btn {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #054a29;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #137547;
+    box-shadow: 0 0 0 2px #054a29;
+    transition: 0.7s;
+    border: none;
+  }
+}
