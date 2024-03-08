@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import fahrzeuge from 'src/app/db/fahrzeuge';
 import { Question } from 'src/app/models/question.interface';
 import { DbService } from 'src/app/service/db.service';
@@ -17,7 +18,7 @@ export class ChooseOneComponent implements OnInit {
   correctAnswerSoundFileName = 'right-answer.mp3'
   wrongAnswerSoundFileName = 'wrong-answer.mp3'
 
-  constructor(private dbService: DbService) { }
+  constructor(private dbService: DbService, private router: Router) { }
 
   ngOnInit(): void {
     this.playAudio(this.questionsList[this.currentQuestionIndex].url)
@@ -35,6 +36,8 @@ export class ChooseOneComponent implements OnInit {
       this.selectedAnswerIndex = null;
       this.isAnswerCorrect = null;
       this.playAudio(this.questionsList[this.currentQuestionIndex].url);
+    } else {
+      this.router.navigate(['/games/results'])
     }
   }
 
