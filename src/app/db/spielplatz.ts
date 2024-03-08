@@ -23,7 +23,7 @@ const spielplatz: Question[] = [{
   }]
 }, {
   value: 'im sandkasten spielen',
-  url: '../../../../assets/audio/spielplatz/pronunciation_de_die_kinder_spielen_im_sandkasten.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/eimer.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/fußball_spielen.png', isCorrect: false }, {
+  url: '../../../../assets/audio/spielplatz/pronunciation_de_spielen_im_sandkasten..mp3', answersList: [{ value: '../../../../assets/img/spielplatz/eimer.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/fußball_spielen.png', isCorrect: false }, {
     value: '../../../../assets/img/spielplatz/die_kinder_spielen_im_sandkasten.png', isCorrect: true
   }, {
     value: '../../../../assets/img/spielplatz/baumhaus.png', isCorrect: false
@@ -45,21 +45,21 @@ const spielplatz: Question[] = [{
 }, {
   value: 'ich bin dran',
   url: '../../../../assets/audio/spielplatz/pronunciation_de_bin_ich_jetzt_dran.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/bin_ich_jetzt_dran.png', isCorrect: true }, { value: '../../../../assets/img/spielplatz/fußball_spielen.png', isCorrect: false }, {
-    value: '../../../../assets/img/spielplatz/sand.png', isCorrect: false
+    value: '../../../../assets/img/spielplatz/seilbahn.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/mit_puppen_spielen.png', isCorrect: false
   }]
 }, {
   value: 'eimer',
   url: '../../../../assets/audio/spielplatz/pronunciation_de_eimer.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/bin_ich_jetzt_dran.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
-    value: '../../../../assets/img/spielplatz/sand.png', isCorrect: false
+    value: '../../../../assets/img/spielplatz/schaufel.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/eimer.png', isCorrect: true
   }]
 }, {
   value: 'schaufel',
   url: '../../../../assets/audio/spielplatz/pronunciation_de_schaufel.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/schaufel.png', isCorrect: true }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
-    value: '../../../../assets/img/spielplatz/sand.png', isCorrect: false
+    value: '../../../../assets/img/spielplatz/trampolin.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/eimer.png', isCorrect: false
   }]
@@ -67,13 +67,6 @@ const spielplatz: Question[] = [{
   value: 'klettergerüst',
   url: '../../../../assets/audio/spielplatz/pronunciation_de_klettergerüst.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/schaufel.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
     value: '../../../../assets/img/spielplatz/klettergerüst.png', isCorrect: true
-  }, {
-    value: '../../../../assets/img/spielplatz/eimer.png', isCorrect: false
-  }]
-}, {
-  value: 'sandkasten',
-  url: '../../../../assets/audio/spielplatz/pronunciation_de_sandkasten.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/schaufel.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/sandkasten.png', isCorrect: true }, {
-    value: '../../../../assets/img/spielplatz/klettergerüst.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/eimer.png', isCorrect: false
   }]
@@ -99,15 +92,15 @@ const spielplatz: Question[] = [{
     value: '../../../../assets/img/spielplatz/seilbahn.png', isCorrect: true
   }]
 }, {
-  value: 'trampoline',
-  url: '../../../../assets/audio/spielplatz/pronunciation_de_trampoline.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/trampoline.png', isCorrect: true }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
+  value: 'trampolin',
+  url: '../../../../assets/audio/spielplatz/pronunciation_de_trampolin.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/trampolin.png', isCorrect: true }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: false }, {
     value: '../../../../assets/img/spielplatz/schaukel.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/seilbahn.png', isCorrect: false
   }]
 }, {
   value: 'wippe',
-  url: '../../../../assets/audio/spielplatz/pronunciation_de_trampoline.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/trampoline.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: true }, {
+  url: '../../../../assets/audio/spielplatz/pronunciation_de_wippe.mp3', answersList: [{ value: '../../../../assets/img/spielplatz/trampolin.png', isCorrect: false }, { value: '../../../../assets/img/spielplatz/wippe.png', isCorrect: true }, {
     value: '../../../../assets/img/spielplatz/schaukel.png', isCorrect: false
   }, {
     value: '../../../../assets/img/spielplatz/seilbahn.png', isCorrect: false
